@@ -12,5 +12,5 @@ export const townIslandOverviewSx: SxProps<Theme> = {
   justifyContent: 'center',
   alignItems: 'end',
   display: 'flex',
-  padding: 50,
+  padding: 6,
 };
