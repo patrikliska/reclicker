@@ -10,9 +10,7 @@ const MainPanel = () => {
     <Box sx={containerSx}>
       <Resources />
       <Box sx={townIslandOverviewSx}>
-        <Box sx={{ display: 'flex', position: 'relative' }}>
-          <Island />
-        </Box>
+        <Island />
       </Box>
     </Box>
   );

@@ -1,8 +1,8 @@
-import { CSSProperties } from 'react';
+import { SxProps, Theme } from '@mui/material';
 
-export const resourcesContainerStyles = (
+export const getResourcesContainerSx = (
   isCollapsed: boolean
-): CSSProperties => ({
+): SxProps<Theme> => ({
   position: 'absolute',
   top: 0,
   alignItems: 'center',
@@ -13,22 +13,28 @@ export const resourcesContainerStyles = (
   boxShadow: 'rgb(40 44 52) 0px 0px 25px -10px',
   borderRadius: '0 0 5px 5px',
   transition: '1s all',
+  boxSizing: 'border-box',
+  padding: isCollapsed ? 0 : 3,
+  overflow: 'hidden',
 });
 
-export const rowsContainerStyles = (): CSSProperties => ({
+export const rowsContainerSx: SxProps<Theme> = {
   display: 'inline-flex',
   flexDirection: 'column',
   position: 'absolute',
   bottom: 0,
-  margin: 5,
+  margin: 1,
   opacity: '0.1',
   cursor: 'pointer',
-});
+  marginLeft: 'auto',
+  marginRight: 'auto',
+  transform: 'translateX(-50%)',
+};
 
-export const rowStyles = (): CSSProperties => ({
+export const buttonRowSx: SxProps<Theme> = {
   width: 25,
   height: 2,
   backgroundColor: '#000000',
-  margin: 1,
-  borderRadius: 5,
-});
+  margin: 0.2,
+  borderRadius: 1,
+};

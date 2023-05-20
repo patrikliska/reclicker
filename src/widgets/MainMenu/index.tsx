@@ -11,7 +11,7 @@ const MainMenu = () => {
     JSON.parse(localStorage.getItem('isAuth') ?? 'false')
   );
   const [avatar, setAvatar] = useState(
-    localStorage.getItem('userAvatar') ?? ''
+    localStorage.getItem('userAvatar') || 'https://placehold.co/64x64'
   );
 
   const googleSignIn = () => {
@@ -31,19 +31,19 @@ const MainMenu = () => {
     localStorage.setItem('userAvatar', '');
   };
 
+  const linkStyles = {
+    color: 'white',
+    textDecoration: 'none',
+    margin: '0 8px',
+  };
+
   return (
     <nav style={StyledMainMenuContainer}>
       <MenuContainer width={20}>
-        <Link
-          to='/'
-          style={{ color: 'white', textDecoration: 'none', margin: '0 8px' }}
-        >
+        <Link to='/' style={linkStyles}>
           Home
         </Link>
-        <Link
-          to='/portfolio'
-          style={{ color: 'white', textDecoration: 'none', margin: '0 8px' }}
-        >
+        <Link to='/portfolio' style={linkStyles}>
           Portfolio
         </Link>
       </MenuContainer>
@@ -62,6 +62,7 @@ const MainMenu = () => {
             width: 'auto',
             height: 'calc(100% + 20px)',
             borderRadius: '50%',
+            marginLeft: 'auto',
           }}
         />
       </MenuContainer>

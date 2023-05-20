@@ -5,11 +5,9 @@ import MainMenu from '../widgets/MainMenu';
 
 import { appContainerSx } from './styles';
 
-const App = () => (
-  <Box className='App' sx={appContainerSx}>
+export const App = () => (
+  <Box sx={appContainerSx}>
     <MainMenu />
     <Home />
   </Box>
 );
-
-export default App;
