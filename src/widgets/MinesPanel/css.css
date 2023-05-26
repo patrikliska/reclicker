@@ -1,0 +1,25 @@
+.component-container {
+  position: relative;
+  display: inline-block;
+}
+
+.button {
+  padding: 10px;
+}
+
+.counter-animation {
+  position: absolute;
+  top: -20px;
+  animation: flyUpAndDisappear 2s forwards;
+}
+
+@keyframes flyUpAndDisappear {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+}

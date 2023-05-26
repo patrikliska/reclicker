@@ -1,3 +1,4 @@
+import { SxProps, Theme, keyframes } from '@mui/material';
 import { CSSProperties } from 'react';
 
 export const minesPanelContainerStyles = (): CSSProperties => ({
